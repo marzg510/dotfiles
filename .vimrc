@@ -35,6 +35,11 @@ set omnifunc=syntaxcomplete#Complete
 
 " setting for neocomplete
 let g:neocomplete#enable_at_startup = 1
+" ruby dictionary for neocomplete
+" git clone https://github.com/pocke/dicts
+let g:neocomplete#sources#dictionary#dictionaries = {
+\   'ruby': $HOME . '/dicts/ruby.dict',
+\ }
 
 colorscheme murphy
 
