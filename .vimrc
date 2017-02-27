@@ -34,6 +34,9 @@ imap <Nul> <C-x><C-o>
 set omnifunc=syntaxcomplete#Complete
 
 "------------------------
+colorscheme murphy
+
+"------------------------
 " setting for neocomplete
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -89,6 +92,9 @@ if has('conceal')
 endif
 
 
+
 "------------------------
-colorscheme murphy
+" setting for vim-ref
+let g:ref_open                    = 'split'
+let g:ref_refe_cmd                = $HOME.'/.rbenv/shims/refe'
 
