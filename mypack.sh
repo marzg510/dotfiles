@@ -6,3 +6,7 @@ git clone https://github.com/Shougo/neosnippet-snippets.git
 git clone https://github.com/thinca/vim-ref.git
 gem install refe2
 bitclust setup
+
+#vim rails
+git clone git://github.com/tpope/vim-rails.git
+git clone git://github.com/tpope/vim-bundler.git
