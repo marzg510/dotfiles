@@ -123,6 +123,4 @@ let g:ref_refe_cmd                = $HOME.'/.rbenv/shims/refe'
 nnoremap <silent> <Space>gb :Gblame<CR>
 nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
-nnoremap <silent> <Space>gc :Gcommit<CR>
-
 
