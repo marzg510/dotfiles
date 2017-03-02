@@ -13,6 +13,28 @@ set wildmenu
 set fenc=utf-8
 set enc=utf-8
 
+" setting statusline
+" ファイル名表示
+set statusline=%F
+" 変更チェック表示
+set statusline+=%m
+" 読み込み専用かどうか表示
+set statusline+=%r
+" ヘルプページなら[HELP]と表示
+set statusline+=%h
+" プレビューウインドウなら[Prevew]と表示
+set statusline+=%w
+" これ以降は右寄せ表示
+set statusline+=%=
+" file encoding
+set statusline+=[FENC=%{&fileencoding}]
+" 現在行数/全行数/percentage
+set statusline+=[%l/%L(%p%%)]
+" display git branch
+set statusline+=%{fugitive#statusline()}
+" always display statusline
+set laststatus=2
+
 filetype plugin indent on
 
 syntax enable
@@ -91,10 +113,16 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-
-
 "------------------------
 " setting for vim-ref
 let g:ref_open                    = 'split'
 let g:ref_refe_cmd                = $HOME.'/.rbenv/shims/refe'
+
+"------------------------
+" setting for vim-fugitive
+nnoremap <silent> <Space>gb :Gblame<CR>
+nnoremap <silent> <Space>gd :Gdiff<CR>
+nnoremap <silent> <Space>gs :Gstatus<CR>
+nnoremap <silent> <Space>gc :Gcommit<CR>
+
 
