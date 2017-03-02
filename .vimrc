@@ -56,7 +56,8 @@ imap <Nul> <C-x><C-o>
 set omnifunc=syntaxcomplete#Complete
 
 "------------------------
-colorscheme murphy
+"colorscheme murphy
+colorscheme elflord
 
 "------------------------
 " setting for neocomplete
