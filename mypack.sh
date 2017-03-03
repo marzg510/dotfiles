@@ -1,3 +1,5 @@
+mkdir -p ~/.vim/pack/mypack/start/
+mkdir -p ~/.vim/pack/mypack/opt/
 cd ~/.vim/pack/mypack/start/
 git clone git://github.com/tpope/vim-endwise.git
 git clone https://github.com/Shougo/neosnippet.vim.git
