@@ -27,11 +27,13 @@ set statusline+=%w
 " これ以降は右寄せ表示
 set statusline+=%=
 " file encoding
-set statusline+=[FENC=%{&fileencoding}]
+set statusline+=[%{&fileencoding}]
 " 現在行数/全行数/percentage
 set statusline+=[%l/%L(%p%%)]
 " display git branch
-set statusline+=%{fugitive#statusline()}
+if exists("fugitive#statusline()")
+    set statusline+=%{fugitive#statusline()}
+endif
 " always display statusline
 set laststatus=2
 
