@@ -31,9 +31,11 @@ set statusline+=[%{&fileencoding}]
 " 現在行数/全行数/percentage
 set statusline+=[%l/%L(%p%%)]
 " display git branch
-if exists("fugitive#statusline()")
+try
     set statusline+=%{fugitive#statusline()}
-endif
+endtry
+
+"endif
 " always display statusline
 set laststatus=2
 
