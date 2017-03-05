@@ -32,8 +32,9 @@ set statusline+=[%{&fileencoding}]
 set statusline+=[%l/%L(%p%%)]
 " display git branch
 try
-    set s:str=%{fugitive#statusline()}
-    set statusline+=%{s:str}
+"    set s:str=%{fugitive#statusline()}
+"    set statusline+=%{s:str}
+    set statusline+=%{fugitive#statusline()}
 catch
 endtry
 " always display statusline
