@@ -44,6 +44,19 @@ filetype plugin indent on
 
 syntax enable
 
+" 全角スペースを可視化
+if has('syntax')
+  syntax enable
+  function! ActivateInvisibleIndicator()
+    highlight ZenkakuSpace cterm=underline ctermfg=Blue gui=underline guifg=Blue
+    match ZenkakuSpace /　/
+  endfunction
+  augroup InvisibleIndicator
+    autocmd!
+    autocmd BufEnter * call ActivateInvisibleIndicator()
+  augroup END
+endif
+
 augroup RubySetup
   au!
   au BufNewFile,BufRead * set tabstop=4 shiftwidth=4
