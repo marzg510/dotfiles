@@ -1,5 +1,5 @@
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set number
 set list
@@ -30,19 +30,14 @@ set statusline+=%=
 set statusline+=[%{&fileencoding}]
 " 現在行数/全行数/percentage
 set statusline+=[%l/%L(%p%%)]
+" always display statusline
 set laststatus=2
 
 " display git branch
-augroup ShowGitBranch
-
+augroup SetFugitiveStatusLine
+    au!
+    au BufNewFile,bufread,bufwrite * set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
 augroup END
-try
-"    set s:str=%{fugitive#statusline()}
-"    set statusline+=%{s:str}
-    set statusline+=%{fugitive#statusline()}
-catch
-endtry
-" always display statusline
 
 filetype plugin indent on
 
