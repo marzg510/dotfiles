@@ -11,7 +11,10 @@ set noundofile
 "set title
 set wildmenu
 set fenc=utf-8
+" for font setting
 set enc=utf-8
+" Use "/" for Directory Separater with Ctrl-X + Ctrl-F
+set shellslash
 
 " setting statusline
 " ファイル名表示
@@ -32,12 +35,27 @@ set statusline+=[%{&fileencoding}]
 set statusline+=[%l/%L(%p%%)]
 " always display statusline
 set laststatus=2
-
 " display git branch
 augroup SetFugitiveStatusLine
+    function! SetFugitiveStatusLine()
+        if get(g:,'loaded_fugitive') && !get(g:,'setted_fugitive_statusline')
+            set statusline+=%{fugitive#statusline()}
+            let g:setted_fugitive_statusline=1
+        endif
+    endfunction
     au!
-    au BufNewFile,bufread,bufwrite * set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+    au BufNewFile,bufread,bufwrite * call SetFugitiveStatusLine()
 augroup END
+
+" Fileformat
+if has('win32') || has('win64')
+    set fileformat=dos
+endif
+
+" Windows key bind(Ctrl-C)
+if has('win32') || has('win64')
+    source $VIMRUNTIME/mswin.vim
+endif
 
 filetype plugin indent on
 
@@ -58,7 +76,6 @@ endif
 
 augroup RubySetup
   au!
-  au BufNewFile,BufRead * set tabstop=4 shiftwidth=4
   au BufNewFile,BufRead *.rhtml set tabstop=2 shiftwidth=2
   au BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2
   au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2
@@ -66,14 +83,18 @@ augroup RubySetup
   au User Rails* set fenc=utf-8
 augroup END
 
-" <C-Space> omni func
-imap <Nul> <C-x><C-o>
+augroup FileTypeIndent
+    au!
+    au BufNewFile,BufRead *.sql setlocal tabstop=2 shiftwidth=2 expandtab
+augroup END
 
 " enable omnifunc
 set omnifunc=syntaxcomplete#Complete
-
-"------------------------
-colorscheme elflord
+" <C-Space> omni func
+imap <Nul> <C-x><C-o>
+if has('win32') || has('win64')
+    imap <C-Space> <C-x><C-o>
+endif
 
 "------------------------
 " setting for neocomplete
@@ -141,3 +162,5 @@ nnoremap <silent> <Space>gb :Gblame<CR>
 nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 
+"------------------------
+colorscheme elflord
