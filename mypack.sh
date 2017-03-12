@@ -1,10 +1,16 @@
 mkdir -p ~/.vim/pack/mypack/start/
 mkdir -p ~/.vim/pack/mypack/opt/
 cd ~/.vim/pack/mypack/start/
-git clone git://github.com/tpope/vim-endwise.git
+# neocomplete
+git clone https://github.com/Shougo/neocomplete.vim.git
+# neosnippet
 git clone https://github.com/Shougo/neosnippet.vim.git
 git clone https://github.com/Shougo/neosnippet-snippets.git
 
+# vim-endwise
+git clone https://github.com/tpope/vim-endwise.git
+
+# vim-ref
 git clone https://github.com/thinca/vim-ref.git
 gem install refe2
 bitclust setup
