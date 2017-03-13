@@ -10,7 +10,11 @@ set noswapfile
 set noundofile
 "set title
 set wildmenu
-set fenc=utf-8
+if has('win32') || has('win64')
+    set fenc=cp932
+else
+    set fenc=utf-8
+endif
 " for font setting
 set enc=utf-8
 " Use "/" for Directory Separater with Ctrl-X + Ctrl-F
