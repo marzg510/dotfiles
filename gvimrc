@@ -3,7 +3,7 @@
 set guifont=Consolas:h10,Lucida_Console:h10:w5
 "set guifont=MS_Gothic:h11
 "set guifontwide=Terminal:h11:cSHIFTJIS
-"set guifontwide=‚l‚r_ƒSƒVƒbƒN:h11:cSHIFTJIS
+"set guifontwide=ï¼­ï¼³_ã‚´ã‚·ãƒƒã‚¯:h11:cSHIFTJIS
 "set guifontwide=MS_Gothic:h11
 set guifontwide=MS_Gothic:h10
 
@@ -31,5 +31,5 @@ colorscheme molokai
 
 "------------------------
 gui
-set transparency=221 " ƒEƒCƒ“ƒhƒE‚ğ”¼“§–¾‚É
+set transparency=221 " ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚’åŠé€æ˜ã«
 
