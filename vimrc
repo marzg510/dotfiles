@@ -167,4 +167,8 @@ nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 
 "------------------------
-colorscheme molokai
+try
+    colorscheme molokai
+catch
+endtry
+
