@@ -167,4 +167,4 @@ nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 
 "------------------------
-colorscheme elflord
+colorscheme molokai
