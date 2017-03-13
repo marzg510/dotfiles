@@ -26,3 +26,8 @@ vim -u NONE -c "helptags vim-fugitive/doc" -c q
 # QFixHowm
 git clone https://github.com/fuenor/qfixhowm.git
 
+# molokai
+cd /tmp
+git clone https://github.com/tomasr/molokai
+mv /tmp/molokai/colors/molokai.vim ~/.vim/colors/.
+rm -rf /tmp/molokai
