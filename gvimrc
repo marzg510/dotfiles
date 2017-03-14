@@ -27,7 +27,10 @@ set guioptions-=T
 "let Grep_Skip_Files = '*.bak *~'"
 
 "------------------------
-colorscheme molokai
+try
+    colorscheme molokai
+catch
+endtry
 
 "------------------------
 gui
