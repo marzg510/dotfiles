@@ -21,26 +21,17 @@ set enc=utf-8
 set shellslash
 
 " setting statusline
-" window番号
-set statusline=[%{winnr()}]
-" ファイル名表示
-set statusline+=%F
-" 変更チェック表示
-set statusline+=%m
-" 読み込み専用かどうか表示
-set statusline+=%r
-" ヘルプページなら[HELP]と表示
-set statusline+=%h
-" プレビューウインドウなら[Prevew]と表示
-set statusline+=%w
-" これ以降は右寄せ表示
-set statusline+=%=
-" file encoding
-set statusline+=[%{&fileencoding}]
-" 現在行数/全行数/percentage
-set statusline+=[%l/%L(%p%%)]
-" always display statusline
-set laststatus=2
+set laststatus=2            " always display statusline
+set statusline=[%{winnr()}] " window番号
+set statusline+=%F          " ファイル名表示
+set statusline+=%y          " filetype
+set statusline+=%m          " 変更チェック表示
+set statusline+=%r          " 読み込み専用かどうか表示
+set statusline+=%h          " ヘルプページなら[HELP]と表示
+set statusline+=%w          " プレビューウインドウなら[Prevew]と表示
+set statusline+=%=          " これ以降は右寄せ表示
+set statusline+=[%{&fileencoding}] " file encoding
+set statusline+=[%l/%L(%p%%)] " 現在行数/全行数/percentage
 " display git branch
 augroup SetFugitiveStatusLine
     function! SetFugitiveStatusLine()
@@ -179,9 +170,27 @@ nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 
 "------------------------
+" setting for memolist
+nnoremap <Leader>mn  :MemoNew<CR>
+nnoremap <Leader>ml  :MemoList<CR>
+nnoremap <Leader>mg  :MemoGrep<CR>
+let g:memolist_memo_suffix = "md"
+
+"------------------------
 try
     colorscheme molokai
 catch
     colorscheme murphy
 endtry
 
+"------------------------
+" open windows automatic
+augroup AutoOpen
+    autocmd!
+    autocmd VimEnter * e ~/memo
+    autocmd VimEnter * rightbelow vnew
+    autocmd VimEnter * wincmd h
+    autocmd VimEnter * 30wincmd |
+    autocmd VimEnter * rightbelow new .
+    autocmd VimEnter * wincmd l
+augroup END
