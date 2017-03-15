@@ -21,8 +21,10 @@ set enc=utf-8
 set shellslash
 
 " setting statusline
+" window番号
+set statusline=[%{winnr()}]
 " ファイル名表示
-set statusline=%F
+set statusline+=%F
 " 変更チェック表示
 set statusline+=%m
 " 読み込み専用かどうか表示
@@ -100,6 +102,16 @@ if has('win32') || has('win64')
     imap <C-Space> <C-x><C-o>
 endif
 
+" disable auto window resize
+set noequalalways
+
+"------------------------
+" setting for netrw
+" 'v'でファイルを開くときは右側に開く。(デフォルトが左側なので入れ替え)
+let g:netrw_altv = 1
+" 'o'でファイルを開くときは下側に開く。(デフォルトが上側なので入れ替え)
+let g:netrw_alto = 1
+
 "------------------------
 " setting for neocomplete
 " Disable AutoComplPop.
@@ -170,5 +182,6 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 try
     colorscheme molokai
 catch
+    colorscheme murphy
 endtry
 
