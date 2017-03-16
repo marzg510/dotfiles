@@ -183,14 +183,3 @@ catch
     colorscheme murphy
 endtry
 
-"------------------------
-" open windows automatic
-augroup AutoOpen
-    autocmd!
-    autocmd VimEnter * e ~/memo
-    autocmd VimEnter * rightbelow vnew
-    autocmd VimEnter * wincmd h
-    autocmd VimEnter * 30wincmd |
-    autocmd VimEnter * rightbelow new .
-    autocmd VimEnter * wincmd l
-augroup END
