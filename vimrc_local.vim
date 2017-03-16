@@ -1,3 +1,6 @@
+" This is vimrc_local sample for KaoriYa gvim.
+" copy to $VIM/ and modify for local environment.
+" ** Attention ** This is sample,Do not link to this file.
 "------------------------
 " open windows automatic
 augroup AutoOpen
