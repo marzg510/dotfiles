@@ -32,3 +32,7 @@ rm -rf /tmp/molokai
 # memolist
 git clone https://github.com/glidenote/memolist.vim.git
 
+
+# vimshell
+git clone https://github.com/Shougo/vimshell.vim.git
+
