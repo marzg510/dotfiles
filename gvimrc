@@ -9,11 +9,7 @@ set printheader=%<%f%h%m%=Page%N
 set guioptions-=T
  
 "------------------------
-try
-    colorscheme molokai
-catch
-    colorscheme murphy
-endtry
+colorscheme murphy
 
 "------------------------
 gui

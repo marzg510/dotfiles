@@ -177,9 +177,5 @@ nnoremap <Leader>mg  :MemoGrep<CR>
 let g:memolist_memo_suffix = "md"
 
 "------------------------
-try
-    colorscheme molokai
-catch
-    colorscheme murphy
-endtry
+colorscheme murphy
 
