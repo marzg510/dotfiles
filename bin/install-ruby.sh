@@ -3,7 +3,7 @@ RUBY_VERSION=2.4.0
 # for yum
 sudo yum install -y git gcc gcc-c++ openssl-devel readline-devel bzip2
 # for apt
-sudo apt-get install git build-essential libssl-dev
+sudo apt-get install git build-essential libssl-dev libreadline-dev
 git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 rbenv -v
 
