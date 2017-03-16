@@ -22,20 +22,21 @@ set shellslash
 
 " setting statusline
 set laststatus=2            " always display statusline
-set statusline=[%{winnr()}] " windowç•ªå·
-set statusline+=%F          " ãƒ•ã‚¡ã‚¤ãƒ«åè¡¨ç¤º
+set statusline=[%{winnr()}] " window”Ô†
+set statusline+=%F          " ƒtƒ@ƒCƒ‹–¼•\¦
 set statusline+=%y          " filetype
-set statusline+=%m          " å¤‰æ›´ãƒã‚§ãƒƒã‚¯è¡¨ç¤º
-set statusline+=%r          " èª­ã¿è¾¼ã¿å°‚ç”¨ã‹ã©ã†ã‹è¡¨ç¤º
-set statusline+=%h          " ãƒ˜ãƒ«ãƒ—ãƒšãƒ¼ã‚¸ãªã‚‰[HELP]ã¨è¡¨ç¤º
-set statusline+=%w          " ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãªã‚‰[Prevew]ã¨è¡¨ç¤º
-set statusline+=%=          " ã“ã‚Œä»¥é™ã¯å³å¯„ã›è¡¨ç¤º
+set statusline+=%m          " •ÏXƒ`ƒFƒbƒN•\¦
+set statusline+=%r          " “Ç‚İ‚İê—p‚©‚Ç‚¤‚©•\¦
+set statusline+=%h          " ƒwƒ‹ƒvƒy[ƒW‚È‚ç[HELP]‚Æ•\¦
+set statusline+=%w          " ƒvƒŒƒrƒ…[ƒEƒCƒ“ƒhƒE‚È‚ç[Prevew]‚Æ•\¦
+set statusline+=%=          " ‚±‚êˆÈ~‚Í‰EŠñ‚¹•\¦
 set statusline+=[%{&fileencoding}] " file encoding
-set statusline+=[%l/%L(%p%%)] " ç¾åœ¨è¡Œæ•°/å…¨è¡Œæ•°/percentage
+set statusline+=[%l/%L(%p%%)] " Œ»İs”/‘Ss”/percentage
 " display git branch
+let g:setted_fugitive_statusline=0
 augroup SetFugitiveStatusLine
     function! SetFugitiveStatusLine()
-        if get(g:,'loaded_fugitive') && !get(g:,'setted_fugitive_statusline')
+        if !get(g:,'setted_fugitive_statusline') && get(g:,'loaded_fugitive')
             set statusline+=%{fugitive#statusline()}
             let g:setted_fugitive_statusline=1
         endif
@@ -58,12 +59,12 @@ filetype plugin indent on
 
 syntax enable
 
-" å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ã‚’å¯è¦–åŒ–
+" ‘SŠpƒXƒy[ƒX‚ğ‰Â‹‰»
 if has('syntax')
   syntax enable
   function! ActivateInvisibleIndicator()
     highlight ZenkakuSpace cterm=underline ctermfg=Blue gui=underline guifg=Blue
-    match ZenkakuSpace /ã€€/
+    match ZenkakuSpace /@/
   endfunction
   augroup InvisibleIndicator
     autocmd!
@@ -98,9 +99,9 @@ set noequalalways
 
 "------------------------
 " setting for netrw
-" 'v'ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ãã¨ãã¯å³å´ã«é–‹ãã€‚(ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãŒå·¦å´ãªã®ã§å…¥ã‚Œæ›¿ãˆ)
+" 'v'‚Åƒtƒ@ƒCƒ‹‚ğŠJ‚­‚Æ‚«‚Í‰E‘¤‚ÉŠJ‚­B(ƒfƒtƒHƒ‹ƒg‚ª¶‘¤‚È‚Ì‚Å“ü‚ê‘Ö‚¦)
 let g:netrw_altv = 1
-" 'o'ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ãã¨ãã¯ä¸‹å´ã«é–‹ãã€‚(ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãŒä¸Šå´ãªã®ã§å…¥ã‚Œæ›¿ãˆ)
+" 'o'‚Åƒtƒ@ƒCƒ‹‚ğŠJ‚­‚Æ‚«‚Í‰º‘¤‚ÉŠJ‚­B(ƒfƒtƒHƒ‹ƒg‚ªã‘¤‚È‚Ì‚Å“ü‚ê‘Ö‚¦)
 let g:netrw_alto = 1
 
 "------------------------
@@ -171,10 +172,15 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 
 "------------------------
 " setting for memolist
-nnoremap <Leader>mn  :MemoNew<CR>
-nnoremap <Leader>ml  :MemoList<CR>
-nnoremap <Leader>mg  :MemoGrep<CR>
+nnoremap <Space>mn  :MemoNew<CR>
+nnoremap <Space>ml  :MemoList<CR>
+nnoremap <Space>mg  :MemoGrep<CR>
 let g:memolist_memo_suffix = "md"
+
+"------------------------
+" setting for VimShell
+nnoremap <Space>vs   :VimShell<CR>
+nnoremap <Space>vp   :VimShellPop<CR>
 
 "------------------------
 colorscheme murphy
