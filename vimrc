@@ -10,11 +10,7 @@ set noswapfile
 set noundofile
 "set title
 set wildmenu
-if has('win32') || has('win64')
-    set fenc=cp932
-else
-    set fenc=utf-8
-endif
+
 " for font setting
 set enc=utf-8
 " Use "/" for Directory Separater with Ctrl-X + Ctrl-F
@@ -22,16 +18,17 @@ set shellslash
 
 " setting statusline
 set laststatus=2            " always display statusline
-set statusline=[%{winnr()}] " window”Ô†
-set statusline+=%F          " ƒtƒ@ƒCƒ‹–¼•\¦
+set statusline=[%{winnr()}] " windowç•ªå·
+set statusline+=%F          " ãƒ•ã‚¡ã‚¤ãƒ«åè¡¨ç¤º
 set statusline+=%y          " filetype
-set statusline+=%m          " •ÏXƒ`ƒFƒbƒN•\¦
-set statusline+=%r          " “Ç‚İ‚İê—p‚©‚Ç‚¤‚©•\¦
-set statusline+=%h          " ƒwƒ‹ƒvƒy[ƒW‚È‚ç[HELP]‚Æ•\¦
-set statusline+=%w          " ƒvƒŒƒrƒ…[ƒEƒCƒ“ƒhƒE‚È‚ç[Prevew]‚Æ•\¦
-set statusline+=%=          " ‚±‚êˆÈ~‚Í‰EŠñ‚¹•\¦
+set statusline+=%m          " å¤‰æ›´ãƒã‚§ãƒƒã‚¯è¡¨ç¤º
+set statusline+=%r          " èª­ã¿è¾¼ã¿å°‚ç”¨ã‹ã©ã†ã‹è¡¨ç¤º
+set statusline+=%h          " ãƒ˜ãƒ«ãƒ—ãƒšãƒ¼ã‚¸ãªã‚‰[HELP]ã¨è¡¨ç¤º
+set statusline+=%w          " ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãªã‚‰[Prevew]ã¨è¡¨ç¤º
+set statusline+=%=          " ã“ã‚Œä»¥é™ã¯å³å¯„ã›è¡¨ç¤º
+set statusline+=[%{&fileformat}] " file format
 set statusline+=[%{&fileencoding}] " file encoding
-set statusline+=[%l/%L(%p%%)] " Œ»İs”/‘Ss”/percentage
+set statusline+=[%l/%L(%p%%)] " ç¾åœ¨è¡Œæ•°/å…¨è¡Œæ•°/percentage
 " display git branch
 let g:setted_fugitive_statusline=0
 augroup SetFugitiveStatusLine
@@ -59,18 +56,21 @@ filetype plugin indent on
 
 syntax enable
 
-" ‘SŠpƒXƒy[ƒX‚ğ‰Â‹‰»
+" Visible W-byte space
 if has('syntax')
   syntax enable
   function! ActivateInvisibleIndicator()
     highlight ZenkakuSpace cterm=underline ctermfg=Blue gui=underline guifg=Blue
-    match ZenkakuSpace /@/
+    match ZenkakuSpace /ã€€/
   endfunction
   augroup InvisibleIndicator
     autocmd!
     autocmd BufEnter * call ActivateInvisibleIndicator()
   augroup END
 endif
+
+" disable markdown syntax conceal
+let g:markdown_syntax_conceal=0
 
 augroup RubySetup
   au!
@@ -97,11 +97,16 @@ endif
 " disable auto window resize
 set noequalalways
 
+" new window below
+"set splitbelow
+" new window right
+"set splitright
+
 "------------------------
 " setting for netrw
-" 'v'‚Åƒtƒ@ƒCƒ‹‚ğŠJ‚­‚Æ‚«‚Í‰E‘¤‚ÉŠJ‚­B(ƒfƒtƒHƒ‹ƒg‚ª¶‘¤‚È‚Ì‚Å“ü‚ê‘Ö‚¦)
+" 'v'ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ãã¨ãã¯å³å´ã«é–‹ãã€‚(ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãŒå·¦å´ãªã®ã§å…¥ã‚Œæ›¿ãˆ)
 let g:netrw_altv = 1
-" 'o'‚Åƒtƒ@ƒCƒ‹‚ğŠJ‚­‚Æ‚«‚Í‰º‘¤‚ÉŠJ‚­B(ƒfƒtƒHƒ‹ƒg‚ªã‘¤‚È‚Ì‚Å“ü‚ê‘Ö‚¦)
+" 'o'ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ãã¨ãã¯ä¸‹å´ã«é–‹ãã€‚(ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãŒä¸Šå´ãªã®ã§å…¥ã‚Œæ›¿ãˆ)
 let g:netrw_alto = 1
 
 "------------------------

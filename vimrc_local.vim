@@ -2,6 +2,8 @@
 " copy to $VIM/ and modify for local environment.
 " ** Attention ** This is sample,Do not link to this file.
 "------------------------
+" set fileencoding
+set fenc=cp932
 " open windows automatic
 augroup AutoOpen
     autocmd!
