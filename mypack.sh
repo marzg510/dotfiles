@@ -35,6 +35,10 @@ git clone https://github.com/glidenote/memolist.vim.git
 git clone https://github.com/fuenor/qfixhowm.git
 
 # vimshell
+git clone https://github.com/Shougo/vimproc.vim.git
+cd vimproc.vim/
+make
+cd ..
 git clone https://github.com/Shougo/vimshell.vim.git
 
 # markdown
