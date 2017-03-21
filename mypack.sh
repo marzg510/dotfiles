@@ -31,8 +31,12 @@ rm -rf /tmp/molokai
 
 # memolist
 git clone https://github.com/glidenote/memolist.vim.git
-
+# QFixHowm
+git clone https://github.com/fuenor/qfixhowm.git
 
 # vimshell
 git clone https://github.com/Shougo/vimshell.vim.git
+
+# markdown
+git clone https://github.com/tpope/vim-markdown.git
 

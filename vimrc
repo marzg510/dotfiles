@@ -183,6 +183,16 @@ nnoremap <Space>mg  :MemoGrep<CR>
 let g:memolist_memo_suffix = "md"
 
 "------------------------
+" setting for QFixHowm
+let QFixHowm_Key = '<Space>'
+"新規エントリのテンプレート
+let QFixHowm_Template = [
+  \"= %TAG%",
+  \""
+\]
+let QFixHowm_FileType = 'markdown'
+
+"------------------------
 " setting for VimShell
 nnoremap <Space>vs   :VimShell<CR>
 nnoremap <Space>vp   :VimShellPop<CR>

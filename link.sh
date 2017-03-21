@@ -7,4 +7,5 @@ ln -s ~/dotfiles/bash_profile ~/.bash_profile
 #mklink .vimrc ..\dotfiles\vimrc
 #mklink .gvimrc ..\dotfiles\gvimrc
 #mklink /D C:\Users\hoge\memo D:\gotowork\howm
-mklink /D memo E:\gotowork\Documents\memo
+#mklink /D memo E:\gotowork\Documents\memo
+#mklink /D howm E:\gotowork\Documents\memo
