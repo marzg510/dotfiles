@@ -194,8 +194,8 @@ let QFixHowm_FileType = 'markdown'
 
 "------------------------
 " setting for VimShell
-nnoremap <Space>vs   :VimShell<CR>
-nnoremap <Space>vp   :VimShellPop<CR>
+"nnoremap <Space>vs   :VimShell<CR>
+"nnoremap <Space>vp   :VimShellPop<CR>
 
 "------------------------
 colorscheme murphy
