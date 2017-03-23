@@ -177,10 +177,10 @@ nnoremap <silent> <Space>gs :Gstatus<CR>
 
 "------------------------
 " setting for memolist
-nnoremap <Space>mn  :MemoNew<CR>
-nnoremap <Space>ml  :MemoList<CR>
-nnoremap <Space>mg  :MemoGrep<CR>
-let g:memolist_memo_suffix = "md"
+"nnoremap <Space>mn  :MemoNew<CR>
+"nnoremap <Space>ml  :MemoList<CR>
+"nnoremap <Space>mg  :MemoGrep<CR>
+"let g:memolist_memo_suffix = "md"
 
 "------------------------
 " setting for QFixHowm
