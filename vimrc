@@ -8,7 +8,6 @@ set ignorecase
 set nobackup
 set noswapfile
 set noundofile
-"set title
 set wildmenu
 
 " for font setting
@@ -107,7 +106,7 @@ endif
 " 'v'でファイルを開くときは右側に開く。(デフォルトが左側なので入れ替え)
 let g:netrw_altv = 1
 " 'o'でファイルを開くときは下側に開く。(デフォルトが上側なので入れ替え)
-let g:netrw_alto = 1
+"let g:netrw_alto = 1
 
 "------------------------
 " setting for neocomplete
