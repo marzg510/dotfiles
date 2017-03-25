@@ -25,8 +25,7 @@ set statusline+=%r          " 読み込み専用かどうか表示
 set statusline+=%h          " ヘルプページなら[HELP]と表示
 set statusline+=%w          " プレビューウインドウなら[Prevew]と表示
 set statusline+=%=          " これ以降は右寄せ表示
-set statusline+=[%{&fileformat}] " file format
-set statusline+=[%{&fileencoding}] " file encoding
+set statusline+=[%{&fileformat}:%{&fileencoding}] " file encoding & file format
 set statusline+=[%l/%L(%p%%)] " 現在行数/全行数/percentage
 " display git branch
 let g:setted_fugitive_statusline=0
@@ -42,9 +41,9 @@ augroup SetFugitiveStatusLine
 augroup END
 
 " Fileformat
-if has('win32') || has('win64')
-    set fileformat=dos
-endif
+"if has('win32') || has('win64')
+"    set fileformat=dos
+"endif
 
 " Windows key bind(Ctrl-C)
 if has('win32') || has('win64')
