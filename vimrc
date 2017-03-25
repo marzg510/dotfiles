@@ -40,11 +40,6 @@ augroup SetFugitiveStatusLine
     au BufNewFile,bufread,bufwrite * call SetFugitiveStatusLine()
 augroup END
 
-" Fileformat
-"if has('win32') || has('win64')
-"    set fileformat=dos
-"endif
-
 " Windows key bind(Ctrl-C)
 if has('win32') || has('win64')
     source $VIMRUNTIME/mswin.vim

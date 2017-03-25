@@ -4,6 +4,12 @@
 "------------------------
 " set fileencoding
 set fenc=cp932
+
+" Fileformat
+"if has('win32') || has('win64')
+"    set fileformat=dos
+"endif
+
 " open windows automatic
 augroup AutoOpen
     autocmd!
