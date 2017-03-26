@@ -13,5 +13,5 @@ colorscheme murphy
 
 "------------------------
 gui
-set transparency=221 " ウインドウを半透明に
+set transparency=200 " ウインドウを半透明に
 
