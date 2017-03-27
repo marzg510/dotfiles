@@ -44,3 +44,5 @@ git clone https://github.com/fuenor/qfixhowm.git
 # markdown
 git clone https://github.com/tpope/vim-markdown.git
 
+# quickrun
+git clone https://github.com/thinca/vim-quickrun.git
