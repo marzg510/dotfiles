@@ -10,7 +10,11 @@ git config --list
 ```
 
 ## git clone
+```
 git clone https://github.com/marzg510/dotfiles.git
+```
 
 ## git remote add
+```
 git remote add origin https://github.com/marzg510/dotfiles.git
+```
