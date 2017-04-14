@@ -67,18 +67,18 @@ let g:markdown_syntax_conceal=0
 
 augroup RubySetup
   au!
-#  au BufNewFile,BufRead *.rhtml setlocal tabstop=2 shiftwidth=2
-#  au BufNewFile,BufRead *.rb setlocal tabstop=2 shiftwidth=2
-#  au BufNewFile,BufRead *.yml setlocal tabstop=2 shiftwidth=2
-#  au BufNewFile,BufRead *.erb setlocal tabstop=2 shiftwidth=2
+"  au BufNewFile,BufRead *.rhtml setlocal tabstop=2 shiftwidth=2
+"  au BufNewFile,BufRead *.rb setlocal tabstop=2 shiftwidth=2
+"  au BufNewFile,BufRead *.yml setlocal tabstop=2 shiftwidth=2
+"  au BufNewFile,BufRead *.erb setlocal tabstop=2 shiftwidth=2
   au User Rails* setlocal fenc=utf-8
-  au FileType ruby,eruby setlocal filefomat=unix tabstop=2 shiftwidth=2
+  au FileType ruby,eruby setlocal fileformat=unix tabstop=2 shiftwidth=2
 augroup END
 
 augroup FileTypeIndent
   au!
   au BufNewFile,BufRead *.sql setlocal tabstop=2 shiftwidth=2 expandtab
-  au FileType vim setlocal filefomat=unix tabstop=2 shiftwidth=2
+  au FileType vim setlocal fileformat=unix tabstop=2 shiftwidth=2
 augroup END
 
 " enable omnifunc
