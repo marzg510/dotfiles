@@ -193,5 +193,15 @@ let QFixHowm_FileType = 'markdown'
 "nnoremap <Space>vp   :VimShellPop<CR>
 
 "------------------------
+" setting for Quickrun
+nnoremap <Space>qr :QuickRun<CR>
+let g:quickrun_config={
+    \'_': {
+        \'outputter/buffer/split': ':botright',
+    \},
+\}
+
+
+"------------------------
 colorscheme murphy
 
