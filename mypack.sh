@@ -15,10 +15,6 @@ git clone https://github.com/thinca/vim-ref.git
 gem install refe2
 bitclust setup
 
-#vim rails
-git clone git://github.com/tpope/vim-rails.git
-git clone git://github.com/tpope/vim-bundler.git
-
 #vim-fugitive
 git clone git://github.com/tpope/vim-fugitive.git
 vim -u NONE -c "helptags vim-fugitive/doc" -c q
@@ -46,3 +42,11 @@ git clone https://github.com/tpope/vim-markdown.git
 
 # quickrun
 git clone https://github.com/thinca/vim-quickrun.git
+
+# opts
+cd ~/.vim/pack/mypack/opt/
+#vim rails
+git clone git://github.com/tpope/vim-rails.git
+#git clone git://github.com/tpope/vim-bundler.git
+
+
