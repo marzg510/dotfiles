@@ -3,7 +3,8 @@ set shiftwidth=4
 set expandtab
 set number
 set list
-set listchars=tab:>.,extends:<,trail:_
+set listchars=tab:>-,extends:<,trail:_
+hi SpecialKey guibg=NONE guifg=Gray40
 set ignorecase
 set nobackup
 set noswapfile
