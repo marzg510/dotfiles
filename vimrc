@@ -4,7 +4,6 @@ set expandtab
 set number
 set list
 set listchars=tab:>-,extends:<,trail:_
-hi SpecialKey guibg=NONE guifg=Gray40
 set ignorecase
 set nobackup
 set noswapfile
@@ -205,4 +204,5 @@ let g:quickrun_config={
 
 "------------------------
 colorscheme murphy
-
+" special ky coler set
+hi SpecialKey guibg=NONE guifg=Gray40

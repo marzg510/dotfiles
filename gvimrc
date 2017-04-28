@@ -15,7 +15,8 @@ set guioptions-=T
  
 "------------------------
 colorscheme murphy
-
+" special ky coler set
+hi SpecialKey guibg=NONE guifg=Gray40
 "------------------------
 gui
 if has('win32') || has('win64')
