@@ -41,9 +41,9 @@ augroup SetFugitiveStatusLine
 augroup END
 
 " Windows key bind(Ctrl-C)
-if has('win32') || has('win64')
+"if has('win32') || has('win64')
     source $VIMRUNTIME/mswin.vim
-endif
+"ndif
 
 filetype plugin indent on
 
@@ -77,8 +77,9 @@ augroup END
 
 augroup FileTypeIndent
   au!
-  au BufNewFile,BufRead *.sql setlocal tabstop=2 shiftwidth=2 expandtab
+  au FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
   au FileType vim setlocal fileformat=unix tabstop=2 shiftwidth=2
+  au FileType sh setlocal fileformat=unix tabstop=2 shiftwidth=2
 augroup END
 
 " enable omnifunc

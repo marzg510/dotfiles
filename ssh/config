@@ -1,0 +1,15 @@
+# see https://altarf.net/computer/mac%E3%81%A7%E3%81%AE%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E7%9A%84%E3%81%AA%E4%BD%95%E3%81%8B/2081
+
+ServerAliveInterval 10
+ServerAliveCountMax 12
+ForwardAgent yes
+
+Host corsair
+  HostName corsair.m510.net
+  IdentityFile ~/.ssh/sshkey01.txt
+  User masaru
+ 
+Host masqldon
+  HostName masqldon.m510.net
+  IdentityFile ~/.ssh/masqldon-key.txt
+  User root
