@@ -4,7 +4,12 @@ if has('win32') || has('win64')
   set guifont=Consolas:h10,Lucida_Console:h10:w5
   set guifontwide=MS_Gothic:h10
 endif
- 
+
+if has('unix')
+"  set guifont=Dejavu\ Sans\ Mono\ 10
+  set guifont=Ubuntu\ Mono\ Regular\ 10
+endif
+
 
 if has('win32') || has('win64')
   set printfont=MS_Mincho:h10:cSHIFTJIS
