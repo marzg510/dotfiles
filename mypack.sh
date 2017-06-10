@@ -11,13 +11,13 @@ git clone https://github.com/Shougo/neosnippet-snippets.git
 #git clone https://github.com/tpope/vim-endwise.git
 
 # vim-ref
-git clone https://github.com/thinca/vim-ref.git
-gem install refe2
-bitclust setup
+#git clone https://github.com/thinca/vim-ref.git
+#gem install refe2
+#bitclust setup
 
 #vim-fugitive
-git clone git://github.com/tpope/vim-fugitive.git
-vim -u NONE -c "helptags vim-fugitive/doc" -c q
+#git clone git://github.com/tpope/vim-fugitive.git
+#vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
 # molokai
 #cd /tmp
@@ -28,7 +28,7 @@ vim -u NONE -c "helptags vim-fugitive/doc" -c q
 # memolist
 git clone https://github.com/glidenote/memolist.vim.git
 # QFixHowm
-git clone https://github.com/fuenor/qfixhowm.git
+#git clone https://github.com/fuenor/qfixhowm.git
 
 # vimshell
 #git clone https://github.com/Shougo/vimproc.vim.git
@@ -38,7 +38,7 @@ git clone https://github.com/fuenor/qfixhowm.git
 #git clone https://github.com/Shougo/vimshell.vim.git
 
 # markdown
-git clone https://github.com/tpope/vim-markdown.git
+#git clone https://github.com/tpope/vim-markdown.git
 
 # quickrun
 git clone https://github.com/thinca/vim-quickrun.git

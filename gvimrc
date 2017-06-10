@@ -7,7 +7,7 @@ endif
 
 if has('unix')
 "  set guifont=Dejavu\ Sans\ Mono\ 10
-  set guifont=Ubuntu\ Mono\ Regular\ 10
+  set guifont=Ubuntu\ Mono\ Regular\ 11
 endif
 
 
