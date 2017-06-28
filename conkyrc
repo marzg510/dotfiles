@@ -60,9 +60,9 @@ File systems:
             ${diskiograph}
 $hr
 Networking:
- eth0
- Up: ${upspeed eth0} - Down: ${downspeed eth0}
- ${upspeedgraph eth0 32,140} ${downspeedgraph eth0 32,140}
+ enp1s0
+ Up: ${upspeed enp1s0} - Down: ${downspeed enp1s0}
+ ${upspeedgraph enp1s0 32,140} ${downspeedgraph enp1s0 32,140}
 $hr
 Uptime: $uptime
 Load average: $loadavg
