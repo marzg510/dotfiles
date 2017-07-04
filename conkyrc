@@ -31,10 +31,12 @@ show_graph_scale yes
 show_graph_range no
 
 own_window yes
-own_window_class Conky
-own_window_type normal
+#own_window_class Conky
+#own_window_type normal
+own_window_type conky
 own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
-own_window_transparent no
+#own_window_transparent no
+own_window_transparent yes
 #own_window_colour 999999
 own_window_colour 444444
 own_window_argb_visual yes
@@ -46,7 +48,9 @@ TEXT
 $nodename
 $sysname $kernel $machine
 $hr
+#CPU Freq: ${freq_g}GHz${execi 8 sensors | grep -A 1 'Core 0' | cut -c15-22 | sed '/^$/d'} C
 CPU Frequency: ${freq_g}GHz
+CPU Temp(0/2): ${execi 10 sensors | grep 'Core 0' | awk '{print $3}'} / ${execi 10 sensors | grep 'Core 2' | awk '{print $3}'}
 CPU Usage: ${cpu cpu0}%
             ${cpugraph cpu0 -l}
 RAM Usage: $mem/$memmax

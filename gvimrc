@@ -29,5 +29,6 @@ if has('win32') || has('win64')
 endif
 if has('unix')
   call system('xprop -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY -id "' . v:windowid . '" $(( 4294967296 * 80 / 100 ))')
+  command! Transoff call system('xprop -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY -id "' . v:windowid . '" $(( 4294967295 ))')
 endif
 
