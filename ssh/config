@@ -4,12 +4,12 @@ ServerAliveInterval 10
 ServerAliveCountMax 12
 ForwardAgent yes
 
-Host corsair
-  HostName corsair.m510.net
-  IdentityFile ~/.ssh/sshkey01.txt
-  User masaru
- 
-Host masqldon
-  HostName masqldon.m510.net
-  IdentityFile ~/.ssh/masqldon-key.txt
-  User root
+#Host corsair
+#  HostName corsair.m510.net
+#  IdentityFile ~/.ssh/sshkey01.txt
+#  User masaru
+# 
+#Host masqldon
+#  HostName masqldon.m510.net
+#  IdentityFile ~/.ssh/masqldon-key.txt
+#  User root

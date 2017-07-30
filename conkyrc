@@ -31,16 +31,14 @@ show_graph_scale yes
 show_graph_range no
 
 own_window yes
-#own_window_class Conky
 #own_window_type normal
 own_window_type conky
 own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
-#own_window_transparent no
 own_window_transparent yes
-#own_window_colour 999999
-own_window_colour 444444
+#own_window_colour 444444
 own_window_argb_visual yes
 own_window_argb_value 100
+#own_window_argb_value 0
 
 cpu_avg_samples 4
 
@@ -50,7 +48,8 @@ $sysname $kernel $machine
 $hr
 #CPU Freq: ${freq_g}GHz${execi 8 sensors | grep -A 1 'Core 0' | cut -c15-22 | sed '/^$/d'} C
 CPU Frequency: ${freq_g}GHz
-CPU Temp(0/2): ${execi 10 sensors | grep 'Core 0' | awk '{print $3}'} / ${execi 10 sensors | grep 'Core 2' | awk '{print $3}'}
+#CPU Temp(0/2): ${execi 10 sensors | grep 'Core 0' | awk '{print $3}'} / ${execi 10 sensors | grep 'Core 2' | awk '{print $3}'}
+CPU Temp: ${hwmon temp 2}C / ${hwmon temp 4}C
 CPU Usage: ${cpu cpu0}%
             ${cpugraph cpu0 -l}
 RAM Usage: $mem/$memmax
@@ -70,8 +69,8 @@ Networking:
 $hr
 Uptime: $uptime
 Load average: $loadavg
- Name               PID   CPU%   MEM%
- ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
- ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
- ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
- ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+ Name               PID   CPU% MEMres
+ ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top mem_res 1}
+ ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top mem_res 2}
+ ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top mem_res 3}
+ ${top_mem name 4} ${top_mem pid 4} ${top_mem cpu 4} ${top mem_res 4}

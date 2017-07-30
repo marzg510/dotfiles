@@ -7,3 +7,6 @@ ln -s ~/dotfiles/ssh/config ~/.ssh/config
 
 ln -s ~/dotfiles/conkyrc .conkyrc
 
+mkdir -p ~/.vnc
+ln -s ~/dotfiles/vnc/xstartup ~/.vnc/xstartup
+
