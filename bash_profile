@@ -19,5 +19,5 @@ fi
 AWSCOMP=`which aws_completer`
 [ "${AWSCOMP}" != "" ] && complete -C ${AWSCOMP} aws
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
