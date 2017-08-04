@@ -4,6 +4,10 @@ ServerAliveInterval 10
 ServerAliveCountMax 12
 ForwardAgent yes
 
+Host github.com
+  User marzg510
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa
 #Host corsair
 #  HostName corsair.m510.net
 #  IdentityFile ~/.ssh/sshkey01.txt
