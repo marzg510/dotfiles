@@ -4,7 +4,7 @@ ServerAliveInterval 10
 ServerAliveCountMax 12
 ForwardAgent yes
 
-Host github.com
+Host github
   User marzg510
   HostName github.com
   IdentityFile ~/.ssh/id_rsa
