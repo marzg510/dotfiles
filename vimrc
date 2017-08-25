@@ -1,5 +1,5 @@
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set number
 set list
@@ -77,7 +77,8 @@ augroup END
 
 augroup FileTypeIndent
   au!
-  au FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
+"  au FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
+  au FileType java setlocal tabstop=4 shiftwidth=4 expandtab
   au FileType vim setlocal fileformat=unix tabstop=2 shiftwidth=2
   au FileType sh setlocal fileformat=unix tabstop=2 shiftwidth=2
 augroup END
