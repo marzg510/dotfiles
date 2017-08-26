@@ -1,0 +1,4 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.tabSize": 2
+}
