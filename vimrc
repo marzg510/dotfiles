@@ -9,6 +9,7 @@ set nobackup
 set noswapfile
 set noundofile
 set wildmenu
+set ambiwidth=double
 
 " for font setting
 set enc=utf-8
