@@ -126,3 +126,6 @@ fi
 AWSCOMP=`which aws_completer`
 [ "${AWSCOMP}" != "" ] && complete -C ${AWSCOMP} aws
 
+export PYENV_ROOT=${HOME}/.pyenv
+export PATH=${PYENV_ROOT}/bin:$PATH
+eval "$(pyenv init -)"
