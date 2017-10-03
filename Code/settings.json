@@ -1,4 +1,8 @@
 {
     "vim.disableAnnoyingNeovimMessage": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-v>": false
+    },
     "editor.tabSize": 2
 }
