@@ -10,6 +10,7 @@ set noswapfile
 set noundofile
 set wildmenu
 set ambiwidth=double
+set autochdir
 
 " for font setting
 set enc=utf-8
