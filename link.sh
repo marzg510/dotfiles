@@ -13,3 +13,4 @@ ln -s ~/dotfiles/vnc/xstartup ~/.vnc/xstartup
 mkdir -p ~/.config/Code/User
 ln -s ~/dotfiles/Code/settings.json ~/.config/Code/User/settings.json
 
+ln -s ~/dotfiles/bin/git-all-status.sh ~/bin/.
