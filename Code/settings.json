@@ -1,8 +1,15 @@
 {
-    "vim.disableAnnoyingNeovimMessage": true,
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-v>": false
-    },
-    "editor.tabSize": 2
+  "vim.disableAnnoyingNeovimMessage": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-v>": false,
+    "<C-c>": false
+  },
+  "editor.tabSize": 2,
+  "[java]": {
+    "editor.tabSize": 4
+  },
+  "[groovy]": {
+    "editor.tabSize": 4
+  }
 }
