@@ -207,6 +207,8 @@ let g:quickrun_config={
 
 
 "------------------------
-colorscheme murphy
+if has('unix')
+  colorscheme murphy
+endif
 " special ky coler set
 hi SpecialKey guibg=NONE guifg=Gray40
