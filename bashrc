@@ -129,3 +129,6 @@ AWSCOMP=`which aws_completer`
 export PYENV_ROOT=${HOME}/.pyenv
 export PATH=${PYENV_ROOT}/bin:$PATH
 eval "$(pyenv init -)"
+
+# add path for mediaclassifer
+export PATH=${PATH}:~/bin/mediaclassify

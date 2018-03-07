@@ -20,3 +20,8 @@ git clone https://github.com/marzg510/dotfiles.git
 ```
 git remote add origin https://github.com/marzg510/dotfiles.git
 ```
+
+## install bin
+
+
+
