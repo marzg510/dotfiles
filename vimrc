@@ -103,10 +103,12 @@ endif
 
 "------------------------
 " setting for netrw
-" 'v'でファイルを開くときは右側に開く。(デフォルトが左側なので入れ替え)
+" set default view = tree
+let g:netrw_liststyle = 3
+" 'v' open in right windows (default is left)
 let g:netrw_altv = 1
-" 'o'でファイルを開くときは下側に開く。(デフォルトが上側なので入れ替え)
-"let g:netrw_alto = 1
+" set hide pattern
+let g:netrw_list_hide = "\\(^\\|\\s\\s\\)\\zs\\.\\S\\+"
 
 "------------------------
 " setting for neocomplete
@@ -191,11 +193,6 @@ let QFixHowm_Template = [
   \""
 \]
 let QFixHowm_FileType = 'markdown'
-
-"------------------------
-" setting for VimShell
-"nnoremap <Space>vs   :VimShell<CR>
-"nnoremap <Space>vp   :VimShellPop<CR>
 
 "------------------------
 " setting for Quickrun
