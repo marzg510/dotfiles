@@ -43,9 +43,15 @@ augroup SetFugitiveStatusLine
 augroup END
 
 " Windows key bind(Ctrl-C)
-"if has('win32') || has('win64')
-    source $VIMRUNTIME/mswin.vim
-"ndif
+source $VIMRUNTIME/mswin.vim
+
+" IME AUTO OFF
+if has('unix')
+  function! ImInActivate()
+    call system('fcitx-remote -c')
+  endfunction
+  inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
+endif
 
 filetype plugin indent on
 
