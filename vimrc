@@ -110,7 +110,7 @@ endif
 "------------------------
 " setting for netrw
 " set default view = tree
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 1
 " 'v' open in right windows (default is left)
 let g:netrw_altv = 1
 " set hide pattern
