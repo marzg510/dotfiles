@@ -1,18 +1,18 @@
-ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/gvimrc ~/.gvimrc
-ln -s ~/dotfiles/irbrc ~/.irbrc
-ln -s ~/dotfiles/bashrc ~/.bashrc
+ln -sf ~/dotfiles/vimrc ~/.vimrc
+ln -sf ~/dotfiles/gvimrc ~/.gvimrc
+ln -sf ~/dotfiles/irbrc ~/.irbrc
+ln -sf ~/dotfiles/bashrc ~/.bashrc
 mkdir -p ~/.ssh
-ln -s ~/dotfiles/ssh/config ~/.ssh/config
+ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 
-ln -s ~/dotfiles/conkyrc ~/.conkyrc
+ln -sf ~/dotfiles/conkyrc ~/.conkyrc
 
 mkdir -p ~/.vnc
-ln -s ~/dotfiles/vnc/xstartup ~/.vnc/xstartup
+ln -sf ~/dotfiles/vnc/xstartup ~/.vnc/xstartup
 
 mkdir -p ~/.config/Code/User
-ln -s ~/dotfiles/Code/settings.json ~/.config/Code/User/settings.json
+ln -sf ~/dotfiles/Code/settings.json ~/.config/Code/User/settings.json
 
 # link tools
-ln -s ~/dotfiles/bin/git-all-status.sh ~/bin/.
+ln -sf ~/dotfiles/bin/git-all-status.sh ~/bin/.
 
