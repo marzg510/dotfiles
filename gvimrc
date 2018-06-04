@@ -1,4 +1,4 @@
-set lines=50 columns=130
+set lines=40 columns=130
 
 if has('win32') || has('win64')
   set guifont=Consolas:h10,Lucida_Console:h10:w5
