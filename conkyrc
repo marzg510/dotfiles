@@ -31,8 +31,8 @@ show_graph_scale yes
 show_graph_range no
 
 own_window yes
-#own_window_type normal
-own_window_type conky
+own_window_type normal
+#own_window_type conky
 own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
 own_window_transparent yes
 #own_window_colour 444444
@@ -43,8 +43,7 @@ own_window_argb_value 100
 cpu_avg_samples 4
 
 TEXT
-$nodename
-$sysname $kernel $machine
+$nodename - $sysname $kernel $machine
 $hr
 #CPU Freq: ${freq_g}GHz${execi 8 sensors | grep -A 1 'Core 0' | cut -c15-22 | sed '/^$/d'} C
 CPU Frequency: ${freq_g}GHz

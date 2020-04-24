@@ -29,6 +29,8 @@ if has('unix')
   hi SpecialKey guibg=NONE guifg=Gray40
   call system('xprop -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY -id "' . v:windowid . '" $(( 4294967296 * 80 / 100 ))')
   command! Transoff call system('xprop -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY -id "' . v:windowid . '" $(( 4294967295 ))')
+else
+  colorscheme darkblue
 endif
 "------------------------
 
