@@ -1,11 +1,5 @@
 set lines=40 columns=130
 
-if has('unix')
-  unmap  <expr> <C-F>
-  iunmap <expr> <C-F>
-  cunmap <expr> <C-F>
-endif
-
 if has('win32') || has('win64')
   set guifont=Consolas:h10,Lucida_Console:h10:w5
   set guifontwide=MS_Gothic:h10

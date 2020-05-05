@@ -44,6 +44,9 @@ augroup END
 
 " Windows key bind(Ctrl-C)
 source $VIMRUNTIME/mswin.vim
+silent! unmap  <expr> <C-F>
+silent! iunmap <silent> <expr> <C-F>
+silent! cunmap <silent> <expr> <C-F>
 
 " IME AUTO OFF
 if has('unix')
