@@ -219,3 +219,9 @@ if has('unix')
 endif
 " special ky coler set
 hi SpecialKey guibg=NONE guifg=Gray40
+
+" user shortcuts
+nnoremap <silent> <Space>ew :e ~/workspace<CR>
+nnoremap <silent> <Space>nw :new ~/workspace<CR>
+nnoremap <silent> <Space>nv :new ~/.vimrc<CR>
+nnoremap <silent> <Space>ng :new ~/.gvimrc<CR>
