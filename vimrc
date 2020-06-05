@@ -90,6 +90,7 @@ augroup FileTypeIndent
   au!
 "  au FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
   au FileType java setlocal tabstop=4 shiftwidth=4 expandtab
+  au FileType python setlocal tabstop=4 shiftwidth=4 expandtab
   au FileType vim setlocal fileformat=unix tabstop=2 shiftwidth=2
   au FileType sh setlocal fileformat=unix tabstop=2 shiftwidth=2
 augroup END
@@ -141,7 +142,7 @@ let g:neocomplete#sources#dictionary#dictionaries = {
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=python3complete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby,ruby setlocal omnifunc=rubycomplete#Complete
 
@@ -206,9 +207,12 @@ let QFixHowm_FileType = 'markdown'
 "------------------------
 " setting for Quickrun
 nnoremap <Space>qr :QuickRun<CR>
+nnoremap <Space>qra :QuickRun -args "
 let g:quickrun_config={
     \'_': {
-        \'outputter/buffer/split': ':botright',
+        \ 'runner'    : 'vimproc',
+        \ 'runner/vimproc/updatetime' : 1000,
+        \ 'outputter/buffer/split': ':botright',
     \},
 \}
 
