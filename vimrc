@@ -212,7 +212,7 @@ let g:quickrun_config={
     \'_': {
         \ 'runner'    : 'vimproc',
         \ 'runner/vimproc/updatetime' : 1000,
-        \ 'outputter/buffer/split': ':botright',
+        \ 'outputter/buffer/split': ':botright 8sp',
     \},
 \}
 
