@@ -190,6 +190,7 @@ nnoremap <silent> <Space>gp :Gpush<CR>
 "------------------------
 " setting for memolist
 nnoremap <Space>mn  :new<CR>:MemoNew<CR>
+nnoremap <Space>mnt  :new<CR>:MemoNew<CR>work-memo<CR>
 nnoremap <Space>ml  :MemoList<CR>
 nnoremap <Space>mg  :MemoGrep<CR>
 let g:memolist_memo_suffix = "md"
@@ -224,8 +225,14 @@ endif
 " special ky coler set
 hi SpecialKey guibg=NONE guifg=Gray40
 
+<<<<<<< HEAD
+" date
+nmap <Space>dt <Esc>i<C-R>=strftime("%Y-%m-%d")<CR><Esc>0
+
+=======
 " user shortcuts
 nnoremap <silent> <Space>ew :e ~/workspace<CR>
 nnoremap <silent> <Space>nw :new ~/workspace<CR>
 nnoremap <silent> <Space>nv :new ~/.vimrc<CR>
 nnoremap <silent> <Space>ng :new ~/.gvimrc<CR>
+>>>>>>> 6dc4481f27efbf88871262fce89443c941841799
