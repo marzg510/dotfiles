@@ -43,6 +43,15 @@ git clone https://github.com/glidenote/memolist.vim.git
 # quickrun
 git clone https://github.com/thinca/vim-quickrun.git
 
+# jedi
+git clone --recursive https://github.com/davidhalter/jedi-vim.git
+
+# vimproc
+git clone https://github.com/Shougo/vimproc.vim.git
+cd vimproc.vim
+make
+cd ..
+
 # opts
 cd ~/.vim/pack/mypack/opt/
 #vim rails

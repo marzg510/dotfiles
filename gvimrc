@@ -6,8 +6,8 @@ if has('win32') || has('win64')
 endif
 
 if has('unix')
-"  set guifont=Dejavu\ Sans\ Mono\ 10
-  set guifont=Ubuntu\ Mono\ Regular\ 11
+  set guifont=Dejavu\ Sans\ Mono\ 9
+"  set guifont=Ubuntu\ Mono\ Regular\ 11
 endif
 
 
