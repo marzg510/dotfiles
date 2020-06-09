@@ -227,7 +227,7 @@ hi SpecialKey guibg=NONE guifg=Gray40
 
 " user shortcuts
 " date
-nmap <Space>dt <Esc>i<C-R>=strftime("%Y-%m-%d")<CR><Esc>
+nmap <Space>dt <Esc>a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
 nnoremap <silent> <Space>ew :e ~/workspace<CR>
 nnoremap <silent> <Space>nw :new ~/workspace<CR>
 nnoremap <silent> <Space>nv :new ~/.vimrc<CR>
