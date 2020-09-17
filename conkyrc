@@ -48,6 +48,7 @@ CPU Temp: ${hwmon temp 2}C / ${hwmon temp 4}C
 $hr
 RAM Usage: $mem/$memmax $membar
 Swap Usage: $swap/$swapmax $swapbar
+${memgraph}
 $hr
 File systems:
  /  ${fs_used /}/${fs_size /} ${fs_bar 6 /}
