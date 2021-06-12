@@ -51,9 +51,9 @@ Swap Usage: $swap/$swapmax $swapbar
 ${memgraph}
 $hr
 File systems:
- /  ${fs_used /}/${fs_size /} ${fs_bar 6 /}
+ /sm ${fs_used /}/${fs_size /} ${fs_bar 6 /}
  chn ${fs_used /mnt/chn360/}/${fs_size /mnt/chn360/} ${fs_bar 6 /mnt/chn360/}
- hit ${fs_used /mnt/hitachi500/}/${fs_size /mnt/hitachi500/} ${fs_bar 6 /mnt/hitachi500/}
+ wd5 ${fs_used /mnt/wd500/}/${fs_size /mnt/wd500/} ${fs_bar 6 /mnt/wd500/}
  t-r ${fs_used /mnt/toshiba-raid/}/${fs_size /mnt/toshiba-raid/} ${fs_bar 6 /mnt/toshiba-raid/}
 I/O:  ${diskiograph}
 $hr
