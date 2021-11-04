@@ -3,7 +3,6 @@ ln -sf ~/dotfiles/gvimrc ~/.gvimrc
 ln -sf ~/dotfiles/irbrc ~/.irbrc
 ln -sf ~/dotfiles/gemrc ~/.gemrc
 ln -sf ~/dotfiles/bashrc ~/.bashrc
-ln -sf ~/dotfiles/bash_profile ~/.bash_profile
 mkdir -p ~/.ssh
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 
