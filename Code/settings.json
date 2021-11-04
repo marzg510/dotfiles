@@ -19,7 +19,7 @@
     "--ignore=E501"
   ],
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter-notebook"
   },
   "python.showStartPage": false,
   "git.confirmSync": false,
@@ -40,4 +40,15 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "svn.path": "C:\\Program Files\\TortoiseSVN\\bin\\svn.exe",
+  "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+  "notebook.lineNumbers": "on",
+  "settingsSync.ignoredExtensions": [
+    "ms-toolsai.jupyter",
+    "ms-python.python"
+  ],
 }
