@@ -151,3 +151,11 @@ export NVM_DIR="$HOME/.nvm"
 # proxy
 [ -f ~/.myproxy ] && . ~/.myproxy || true
 
+
+# wsl2
+if [[ "$(uname -r)" == *microsoft* ]]; then
+  service docker status > /dev/null 2>&2
+  if [ $? = 1 ]; then
+    sudo service docker start
+  fi
+fi
