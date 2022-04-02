@@ -146,7 +146,16 @@ export PATH=${PATH}:~/bin/mediaclassify
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && [ -s "dotfiles/autonvmuse.sh" ] && \. "dotfiles/autonvmuse.sh"  # This loads auto-nvm-use
 
 # proxy
 [ -f ~/.myproxy ] && . ~/.myproxy || true
 
+
+# wsl2
+if [[ "$(uname -r)" == *microsoft* ]]; then
+  service docker status > /dev/null 2>&2
+  if [ $? = 1 ]; then
+    sudo service docker start
+  fi
+fi
