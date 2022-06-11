@@ -153,9 +153,9 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # wsl2
-if [[ "$(uname -r)" == *microsoft* ]]; then
-  service docker status > /dev/null 2>&2
-  if [ $? != 0 ]; then
-    sudo service docker start
-  fi
-fi
+#if [[ "$(uname -r)" == *microsoft* ]]; then
+#  service docker status > /dev/null 2>&2
+#  if [ $? != 0 ]; then
+#    sudo service docker start
+#  fi
+#fi
