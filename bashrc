@@ -137,7 +137,7 @@ if [ -f $HOME/.pyenv/bin/pyenv ]; then
 fi
 
 # add path for mediaclassifer
-export PATH=${PATH}:~/bin/mediaclassify
+export PATH=${PATH}:~/bin:~/bin/mediaclassify
 
 # Added by serverless binary installer
 #export PATH="$HOME/.serverless/bin:$PATH"
