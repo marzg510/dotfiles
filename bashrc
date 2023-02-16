@@ -168,3 +168,6 @@ which kubectl > /dev/null 2>&2
 if [ $? = 0 ]; then
   source <(kubectl completion bash)
 fi
+if [ -f $HOME/.cargo/env ]; then
+  . "$HOME/.cargo/env"
+fi
