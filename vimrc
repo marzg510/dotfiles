@@ -191,6 +191,7 @@ nnoremap <silent> <Space>gp :Gpush<CR>
 " setting for memolist
 nnoremap <Space>mn  :new<CR>:MemoNew<CR>
 nnoremap <Space>mnt  :new<CR>:MemoNew<CR>work-memo<CR>
+nnoremap <Space>mnw  :MemoList<CR>G<C-M>
 nnoremap <Space>ml  :MemoList<CR>
 nnoremap <Space>mg  :MemoGrep<CR>
 let g:memolist_memo_suffix = "md"

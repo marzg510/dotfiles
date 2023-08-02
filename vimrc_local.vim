@@ -21,3 +21,4 @@ augroup AutoOpen
     autocmd VimEnter * wincmd l
 augroup END
 
+nnoremap <Space>mnt  :new<CR>:MemoNew<CR>work-memo<CR>
