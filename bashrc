@@ -126,9 +126,48 @@ fi
 AWSCOMP=`which aws_completer`
 [ "${AWSCOMP}" != "" ] && complete -C ${AWSCOMP} aws
 
-export PYENV_ROOT=${HOME}/.pyenv
-export PATH=${PYENV_ROOT}/bin:$PATH
-eval "$(pyenv init -)"
+# pyenv
+if [ -f $HOME/.pyenv/bin/pyenv ]; then
+  export PYENV_ROOT=${HOME}/.pyenv
+  export PATH=${PYENV_ROOT}/bin:$PATH
+  eval "$(pyenv init --path)"
+  if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+  fi
+fi
 
 # add path for mediaclassifer
-export PATH=${PATH}:~/bin/mediaclassify
+export PATH=${PATH}:~/bin:~/bin/mediaclassify
+
+# Added by serverless binary installer
+#export PATH="$HOME/.serverless/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+#[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && [ -s "dotfiles/autonvmuse.sh" ] && \. "dotfiles/autonvmuse.sh"  # This loads auto-nvm-use
+
+# proxy
+[ -f ~/.myproxy ] && . ~/.myproxy || true
+
+
+# wsl2
+#if [[ "$(uname -r)" == *microsoft* ]]; then
+#  service docker status > /dev/null 2>&2
+#  if [ $? != 0 ]; then
+#    sudo service docker start
+#  fi
+#fi
+
+# kubectl completion
+which kubectl > /dev/null 2>&2
+if [ $? = 0 ]; then
+  source <(kubectl completion bash)
+fi
+if [ -f $HOME/.cargo/env ]; then
+  . "$HOME/.cargo/env"
+fi

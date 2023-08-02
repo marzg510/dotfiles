@@ -1,7 +1,7 @@
 RUBY_VERSION=2.4.0
 ######## install rbenv
 # for yum
-sudo yum install -y git gcc gcc-c++ openssl-devel readline-devel bzip2
+# sudo yum install -y git gcc gcc-c++ openssl-devel readline-devel bzip2
 # for apt
 sudo apt-get install git build-essential libssl-dev libreadline-dev
 git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
@@ -24,6 +24,10 @@ gem -v
 gem update --system
 gem -v
  
-######## bundlerのインストール
+######## bundler縺ｮ繧､繝ｳ繧ｹ繝医�ｼ繝ｫ
 gem install bundler
 
+######## Rails縺ｮ繧､繝ｳ繧ｹ繝医�ｼ繝ｫ
+RAILS_VERSION=6.0
+gem install rails -v ${RAILS_VERSION}
+rails -v

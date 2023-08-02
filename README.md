@@ -24,4 +24,8 @@ git remote add origin https://github.com/marzg510/dotfiles.git
 ## install bin
 
 
-
+## Create Link
+### Linux
+- link.sh
+### Windows
+- link.bat
