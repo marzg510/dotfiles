@@ -29,3 +29,12 @@ git remote add origin https://github.com/marzg510/dotfiles.git
 - link.sh
 ### Windows
 - link.bat
+
+
+## Using Tools
+
+### FileBackup.vbs
+
+1. Win+R
+2. Input `shell:sendto`
+3. Create ShortCut to `wintools/FileBackup.vbs`
