@@ -8,9 +8,13 @@ set ignorecase
 set nobackup
 set noswapfile
 set noundofile
+set hidden
 set wildmenu
 set ambiwidth=double
 set autochdir
+set virtualedit=onemore
+set autoindent
+set smartindent
 
 " for font setting
 set enc=utf-8
@@ -29,6 +33,7 @@ set statusline+=%w          " プレビューウインドウなら[Prevew]と表
 set statusline+=%=          " これ以降は右寄せ表示
 set statusline+=[%{&fileformat}:%{&fileencoding}] " file encoding & file format
 set statusline+=[%l/%L(%p%%)] " 現在行数/全行数/percentage
+set showcmd
 " display git branch
 let g:setted_fugitive_statusline=0
 augroup SetFugitiveStatusLine
